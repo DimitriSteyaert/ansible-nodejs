@@ -1,0 +1,8 @@
+---
+- name: Install additional NodeJS modules
+  npm:
+    name: "{{ item.name }}"
+    version: "{{ item.version|default('') }}"
+    state: "{{ item.state }}"
+    global: "{{ item.global|default('yes') }}"
+  with_items: "{{ nodejs_modules }}"

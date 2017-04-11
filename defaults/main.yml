@@ -1,0 +1,7 @@
+---
+nodejs_version: '6.x'
+nodejs_state: present
+nodejs_purge: no
+nodejs_manage_modules: true
+
+nodejs_modules: []

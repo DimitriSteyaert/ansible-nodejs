@@ -1,0 +1,11 @@
+---
+- name: Make sure build-essential is present
+  apt:
+    name: build-essential
+    state: present
+
+- name: Install NodeJS
+  apt:
+    name: nodejs
+    state: "{{ nodejs_state }}"
+    purge: "{{ nodejs_purge }}"

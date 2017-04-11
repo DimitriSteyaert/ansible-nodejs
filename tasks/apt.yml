@@ -1,0 +1,19 @@
+---
+- name: Install apt https transport method
+  apt:
+    name: apt-transport-https
+    state: installed
+
+- name: Add the Nodesource apt key
+  apt_key:
+    url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+
+- name: Configure the Nodesource repo
+  apt_repository:
+    filename: nodesource
+    repo: "deb https://deb.nodesource.com/node_{{ nodejs_version }} jessie main"
+
+- name: Configure the Nodesource src repo
+  apt_repository:
+    filename: nodesource
+    repo: "deb-src https://deb.nodesource.com/node_{{ nodejs_version }} jessie main"

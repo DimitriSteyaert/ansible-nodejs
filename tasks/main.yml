@@ -1,0 +1,6 @@
+---
+- include: apt.yml
+- include: install.yml
+- include: modules.yml
+  when: nodejs_manage_modules
+  tags: modules
