@@ -1,0 +1,34 @@
+---
+
+dependencies: []
+
+galaxy_info:
+  author: 'Dimitri Steyaert'
+  description: 'Install NodeJS on your machine with the version of your choice and let you manage its modules.'
+  company: 'Steyaert Web Services'
+  license: 'MIT'
+  min_ansible_version: '1.9'
+  platforms:
+    - name: Ubuntu
+      versions:
+        - trusty
+        - xenial
+        - yakkety
+        - zesty
+    - name: Debian
+      versions:
+        - wheezy
+        - jessie
+  galaxy_tags:
+    - development
+    - javascript
+    - nodejs
+    - web
+
+ansigenome_info:
+  galaxy_id: 'DimitriSteyaert'
+  travis: False
+  synopsis: |
+    This role installs NodeJS on your machine and lets you define your version of choice. You also get the possibility to enable NodeJS module management so that Ansible will manage this for you.
+  usage: |
+    By default this module just manages the NodeJS installation through NodeJS its package manager. If you want to let Ansible manage the NodeJS modules via npm then you should enable the parameter ```nodejs_manage_modules```
